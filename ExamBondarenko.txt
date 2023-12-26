@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double calculate(double a) {
+    return (sqrt(3) / 4) * pow(a, 2);
+}
+int main() {
+    double a;
+    cout << "Введите длину стороны треугольника: ";
+    cin >> a;
+    if (a <= 0) {
+        cout << "Введено некорректное значение. Длина стороны треугольника должна быть больше нуля." << endl;
+        return 0;
+    }
+    double area = calculate(a);
+    cout << "Площадь равностороннего треугольника: " << area << endl;
+    return 0;
+}
